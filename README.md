@@ -1,24 +1,52 @@
-# README
+# Pokedex API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a RESTful JSON API to index and manage Pokemons from all generations.
 
-Things you may want to cover:
+## Requirements
 
-* Ruby version
+```
+# ruby --version
+ruby 3.0.1p64
 
-* System dependencies
+# rails --version
+Rails 7.1.1
+```
 
-* Configuration
+## Installation
 
-* Database creation
+1. Clone the repository and move to the folder:
 
-* Database initialization
+```
+https://github.com/RodrighoNS/pokedex_api.git
 
-* How to run the test suite
+cd pokedex_api
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+2. Install the dependencies:
 
-* Deployment instructions
+```
+bundle install
+```
 
-* ...
+3. Set up the database:
+
+```
+rails db:create
+rails db:migrate
+```
+
+4. Populate the database using rake task in this same order:
+
+```
+# Pokemons Bulk Load from PokeAPI into the database
+rake pokemons_bulk_load:run
+
+# Pokemons Bulk update
+rake pokemons_bulk_update:run
+```
+
+5. Start the server:
+
+```
+rails s
+```
