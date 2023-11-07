@@ -50,3 +50,9 @@ rake pokemons_bulk_update:run
 ```
 rails s
 ```
+
+6. To access the interactive API documentation:
+
+```
+http://localhost:3000/api-docs/index.html
+```
